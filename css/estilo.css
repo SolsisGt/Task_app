@@ -2,6 +2,11 @@
     background-color: tomato;
     border-radius: 20px;
     border: 3px solid black;
-    width: 300px;
-    
+    width: 350px;
+    padding: 10px 10px 10px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.tituloapp{
+    padding: 10px 10px 10px 10px;
 }
