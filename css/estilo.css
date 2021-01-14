@@ -10,3 +10,9 @@
 .tituloapp{
     padding: 10px 10px 10px 10px;
 }
+.user{
+    color:black;
+}
+.pass{
+    float: right;
+}
