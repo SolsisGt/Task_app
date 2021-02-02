@@ -9,11 +9,10 @@
     while($row=mysqli_fetch_array($result)){
         $json[]=array(
             'name'=>$row['name'],
-            'Task_start'=>$row['task_start'],
-            'Task_end'=>$row['task_end'],
-            'start_time'=>$row['star_time'],
-            'end_time'=>$row['end_time'],
+            'course'=>$row['course'],
             'description'=>$row['description'],
+            'Task_end'=>$row['task_end'],
+            'end_time'=>$row['end_time'],
             'id'=>$row['id']
         );
     }

@@ -29,15 +29,14 @@ $(document).ready(function() {
     $('#task-form').submit(function(e) {
         const postData = {
             name: $('#name').val(),
-        date_start: $('#Task_start').val(),
+            course: $('#course').val(),
             date_end:$('#Task_end').val(),
-            time_start:$('#Start_time').val(),
             time_end:$('#End_time').val(),
             description: $('#description').val(),
             id: $('#taskId').val()
         };
         let url = edit === false ? './php/task-add.php' : './php/task-edit.php';
-        console.log(url);
+        console.log(    );
         $.post(url, postData, function(response) {
             alert(response);
             $('#task-form').trigger('reset');
@@ -62,13 +61,10 @@ $(document).ready(function() {
                         <a class="task-item">${task.name}</a>
                     </td>
                     <td>
-                        ${task.Task_start}
+                        ${task.course}
                     </td>
                     <td>
                         ${task.Task_end}
-                    </td>
-                    <td>
-                        ${task.start_time}
                     </td>
                     <td>
                         ${task.end_time}
@@ -101,9 +97,7 @@ $(document).ready(function() {
         $.post('./php/task-single.php', { id }, function(response) {
             const task = JSON.parse(response);
             $('#name').val(task.name);
-            $('#Task_start').val(task.Task_start);
             $('#Task_end').val(task.Task_end);
-            $('#Start_time').val(task.start_time);
             $('#End_time').val(task.end_time);
             $('#description').val(task.description);
             $('#taskId').val(task.id);
